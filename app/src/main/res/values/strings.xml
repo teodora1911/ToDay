@@ -1,0 +1,51 @@
+<resources>
+    <string name="app_name">ToDay</string>
+    <string name="title_home">Home</string>
+    <string name="title_calendar">Calendar</string>
+    <string name="title_settings">Settings</string>
+    <string-array name="item_types">
+        <item>Travel</item>
+        <item>Work</item>
+        <item>Free time</item>
+    </string-array>
+    <string name="item_type_travel">Travel</string>
+    <string name="item_type_work">Work</string>
+    <string name="item_type_free_time">Free time</string>
+    <string name="delete_action">Delete</string>
+    <string name="no_list_items_message">There are no activities to display.</string>
+    <string name="title_hint">Title</string>
+    <string name="description_hint">Description</string>
+    <string name="location_hint">Location</string>
+    <string name="datetime_hint">Date &amp; Time</string>
+    <string name="submit_form">Save</string>
+    <string name="form_not_valid">Please fill out all fields.</string>
+    <string name="search_hint">Search</string>
+    <string name="confirm_delete">Confirm delete</string>
+    <string name="confirmation_message">Are you sure you want to delete activity?</string>
+    <string name="yes_button">Yes</string>
+    <string name="no_button">No</string>
+    <string name="pic_url_hint">Picture URL</string>
+    <string name="photo_upload_success">Picture successfully added!</string>
+    <string name="default_error_msg">Error occurred. Try again.</string>
+    <string name="item_not_found">Activity is not available.</string>
+    <string name="pic_url_must_contain_value">Please enter picture URL.</string>
+    <string name="invalid_url">Please enter valid URL.</string>
+    <string name="upcoming_activities_title">Upcoming activities</string>
+    <string name="no_pics_found">There are no pictures for this activity.</string>
+
+    <string name="language_preference">Select a language</string>
+    <string name="language_en">English</string>
+    <string name="language_sr">Serbian</string>
+    <string name="notifications_preference">Select notification period</string>
+    <string name="notif_off">Off</string>
+    <string name="notif_hour">1 Hour</string>
+    <string name="notif_day">1 Day</string>
+    <string name="notif_week">1 Week</string>
+
+    <string name="language_preference_key" translatable="false">language</string>
+    <string name="language_preference_default" translatable="false">en</string>
+    <string name="language_en_key" translatable="false">en</string>
+    <string name="language_sr_key" translatable="false">sr</string>
+    <string name="notifications_preference_key" translatable="false">notifications</string>
+    <string name="notifications_preference_default" translatable="false">0</string>
+</resources>

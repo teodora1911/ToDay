@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ToDay</string>
+    <string name="title_home">Почетна</string>
+    <string name="title_calendar">Календар</string>
+    <string name="title_settings">Подешавања</string>
+    <string-array name="item_types">
+        <item>Путовање</item>
+        <item>Посао</item>
+        <item>Слободно вријеме</item>
+    </string-array>
+    <string name="item_type_travel">Путовање</string>
+    <string name="item_type_work">Посао</string>
+    <string name="item_type_free_time">Слободно вријеме</string>
+    <string name="delete_action">Обриши</string>
+    <string name="no_list_items_message">Нема пронађених активности.</string>
+    <string name="search_hint">Претрага</string>
+    <string name="title_hint">Назив</string>
+    <string name="description_hint">Опис</string>
+    <string name="location_hint">Мјесто</string>
+    <string name="datetime_hint">Датум &amp; Вријеме</string>
+    <string name="submit_form">Сачувај</string>
+    <string name="form_not_valid">Молимо Вас попуните сва поља.</string>
+    <string name="confirm_delete">Брисање</string>
+    <string name="confirmation_message">Да ли сте сигурни да желите обрисати активност?</string>
+    <string name="yes_button">Да</string>
+    <string name="no_button">Не</string>
+    <string name="pic_url_hint">URL слике</string>
+    <string name="photo_upload_success">Фотографија је успјешно додана!</string>
+    <string name="item_not_found">Активност није доступна.</string>
+    <string name="pic_url_must_contain_value">Молимо унесите URL фотографије.</string>
+    <string name="invalid_url">Нисте унијели одговарајући URL.</string>
+    <string name="default_error_msg">Десила се грешка. Покушајте поново.</string>
+    <string name="upcoming_activities_title">Предстојеће активности</string>
+    <string name="no_pics_found">Нема фотографија везаних за ову активност.</string>
+
+    <string name="language_preference">Одаберите језик</string>
+    <string name="language_en">Енглески</string>
+    <string name="language_sr">Српски</string>
+    <string name="notifications_preference">Одаберите период подсјећања</string>
+    <string name="notif_off">Искључено</string>
+    <string name="notif_hour">1 сат</string>
+    <string name="notif_day">1 дан</string>
+    <string name="notif_week">1 седмица</string>
+</resources>

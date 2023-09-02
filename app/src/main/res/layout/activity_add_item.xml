@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.AddItemActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/titleTextViewLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:boxBackgroundColor="@android:color/transparent"
+        app:layout_constraintBottom_toTopOf="@id/dateTimeLayout"
+        app:layout_constraintEnd_toStartOf="@id/dateTimeLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/titleTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:gravity="center"
+            android:hint="@string/title_hint"
+            android:inputType="text"
+            android:singleLine="true"
+            android:textSize="20sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <LinearLayout
+        android:id="@+id/dateTimeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextViewLayout">
+
+        <TextView
+            android:id="@+id/timestampTextView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="15dp"
+            android:layout_weight="4"
+            android:gravity="center"
+            android:hint="@string/datetime_hint"
+            android:padding="10dp"
+            android:textAlignment="center"
+            android:textSize="17sp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/datePickerButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/ic_calendar_black_24dp"
+            android:padding="10dp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/timePickerButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_weight="1"
+            android:padding="15dp"
+            app:srcCompat="@drawable/ic_time_black_24dp"/>
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/descriptionTextViewLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:boxBackgroundColor="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="@id/dateTimeLayout"
+        app:layout_constraintTop_toBottomOf="@id/dateTimeLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/descriptionTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:hint="@string/description_hint"
+            android:inputType="text|textMultiLine"
+            android:singleLine="true"
+            android:textSize="17sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/locationTextViewLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:boxBackgroundColor="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="@id/descriptionTextViewLayout"
+        app:layout_constraintTop_toBottomOf="@id/descriptionTextViewLayout">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/locationTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:hint="@string/location_hint"
+            android:inputType="text"
+            android:singleLine="true"
+            android:textSize="17sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Spinner
+        android:id="@+id/typeComboBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:drawSelectorOnTop="true"
+        android:entries="@array/item_types"
+        android:gravity="center"
+        android:padding="10dp"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/locationTextViewLayout"
+        app:layout_constraintVertical_bias="0" />
+
+    <LinearLayout
+        android:id="@+id/picButtonsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/submitButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/typeComboBox"
+        android:weightSum="3"
+        android:layout_margin="20dp"
+        app:layout_constraintVertical_bias="0"
+        android:gravity="center"
+        android:visibility="gone">
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/galleryButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="15dp"
+            android:padding="15dp"
+            app:srcCompat="@android:drawable/ic_menu_gallery"/>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/takePhotoButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="15dp"
+            android:padding="15dp"
+            app:srcCompat="@android:drawable/ic_menu_camera"/>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/loadFromNetButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_margin="15dp"
+            android:padding="15dp"
+            app:srcCompat="@drawable/ic_wifi_gray_24dp"/>
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/netPictureTextViewLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:boxBackgroundColor="@android:color/transparent"
+        app:layout_constraintBottom_toTopOf="@+id/submitButton"
+        app:layout_constraintTop_toBottomOf="@+id/picButtonsLayout"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/netPictureTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:gravity="center"
+            android:hint="@string/pic_url_hint"
+            android:inputType="text"
+            android:singleLine="true"
+            android:textSize="17sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/purple_700"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/submit_form"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintVertical_bias="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/typeComboBox" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
